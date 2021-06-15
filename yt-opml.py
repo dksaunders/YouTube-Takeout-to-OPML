@@ -55,7 +55,7 @@ def main():
             
             # This command maps the elements from the JSON file to their
             # corresponding attributes in the <outline> element of an OPML file.
-            et.SubElement(body, "outline",
+            et.SubElement(youtube, "outline",
                 title=snippet.get("title"),
                 text=snippet.get("title"),
                 description=snippet.get("description"),
