@@ -22,8 +22,13 @@ def main():
     # Initialize the OPML Element
     opml = et.Element("opml", version="2.0")
     head = et.SubElement(opml, "head")
-    et.SubElement(head, "title").text = "YouTube Subscriptions"
+    et.SubElement(head, "title").text = "Google Takeout"
     body = et.SubElement(opml, "body")
+    youtube = et.SubElement(body, "outline", 
+        title="YouTube Subscriptions",
+        text="YouTube Subscriptions",
+        type="folder"
+    )
 
     with args.input as takeout:
         subscriptions = json.load(takeout)
