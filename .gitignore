@@ -1,0 +1,3 @@
+# Ignore JSON and OPML files for testing
+*.json 
+*.opml
